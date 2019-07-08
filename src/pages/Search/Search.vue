@@ -1,6 +1,6 @@
 <template>
   <section class="search">
-    <Header title="搜 索"></Header>
+    <Header title="搜 索"/>
     <form class="search_form" action="#">
       <input type="search" name="search" placeholder="请输入商家或美食名称" class="search_input">
       <input type="submit" name="submit" class="search_submit">
@@ -14,10 +14,11 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
- @import '../../common/stylus/mixins.styl'
+  @import '../../common/stylus/mixins.styl'
+
   .search  //搜索
     width 100%
-   .search_form
+    .search_form
       clearFix()
       margin-top 45px
       background-color #fff
@@ -37,10 +38,9 @@
           background-color #f2f2f2
         &.search_submit
           float right
-          width 20%
+          width 18%
           border 4px solid #02a774
           font-size 16px
           color #fff
           background-color #02a774
-
 </style>

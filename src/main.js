@@ -1,18 +1,24 @@
 import Vue from 'vue'
-import App from './App'
-//引入配置的路由
+
+import App from './App.vue'
 import router from './router'
+import store from './vuex/store'
+import Header from './components/Header/Header.vue'
+import Star from './components/Star/Star.vue'
 
-import Header from './common/Header/Header.vue'
+// 注册全局组件
+Vue.component('Header', Header)
+Vue.component('Star', Star)
 
-//注册全局组件（此组件是公共的，即可注册全局的组件，方便全局都可以使用）
-Vue.component('Header',Header)
-
+/* eslint-disable no-new */
 new Vue({
-  el:'#app',
-  /* components:{App},
-  template:'<App/>'//标签格式的字符串 */
-  render:h=>h(App),
-  router //配置路由器
-
+  el: '#app',
+  /* components: {
+    App
+  },
+  template: '<App/>' */
+  // render: createElement => createElement(App)  // <App/>
+  render: h => h(App),  // <App/>
+  router, // 配置路由器
+  store, // 配置vuex
 })

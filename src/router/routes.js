@@ -1,8 +1,8 @@
 import MSite from '../pages/MSite/MSite.vue'
 import Search from '../pages/Search/Search.vue'
 import Order from '../pages/Order/Order.vue'
-import Prifile from '../pages/Prifile/Prifile.vue'
-import Login  from '../pages/Login/Login.vue'
+import Profile from '../pages/Profile/Profile.vue'
+import Login from '../pages/Login/Login.vue'
 
 export default [
   {
@@ -10,8 +10,7 @@ export default [
     component: MSite,
     meta: {
       isShowFooter: true
-     }
-
+    }
   },
   {
     path: '/search',
@@ -28,17 +27,17 @@ export default [
     }
   },
   {
-    path: '/prifile',
-    component: Prifile,
+    path: '/profile',
+    component: Profile,
     meta: {
       isShowFooter: true
     }
   },
   {
     path: '/login',
-    component: Login,
-
+    component: Login
   },
+
   {
     path: '/', // 项目根路径
     redirect: '/msite'
